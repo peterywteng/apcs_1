@@ -21,13 +21,8 @@ int main(void){
     scanf("%d", &y);
     printf("A+B=%d\n", x+y);
     printf("A-B=%d\n", x-y);
-    
     printf("A*B=%d\n", x*y);
     printf("A/B=%d\n", x/y);
     printf("A %% B=%d\n", x%y);
-    
-    
-    
-    
     
 }
