@@ -179,7 +179,7 @@ int main(void)
 */
 
 /* 習題4 某月天數 */
-
+/*
     int year, month, day;
     int result=0;
 
@@ -216,7 +216,9 @@ int main(void)
     else {
         printf("西元%d年%d月有30天", year, month);      
     }
+*/
 
+    
 
     /* 習題5 找最小整數 */
 /*
