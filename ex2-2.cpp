@@ -218,6 +218,62 @@ int main(void)
     }
 
 
+    /* 習題5 找最小整數 */
+/*
+    int int1, int2, int3, int4;
+    int result=0;
+
+    printf("請輸入第一個整數: ");
+    scanf("%d", &int1);
+    printf("請輸入第二個整數: ");
+    scanf("%d", &int2);
+    printf("請輸入第三個整數: ");
+    scanf("%d", &int3);
+    printf("請輸入第四個整數: ");
+    scanf("%d", &int4);
+
+    if(int1 < int2) {
+        result = int1;
+    } else {
+        result = int2;
+    }
+    if(int3 < result) {
+        result = int3;
+    }
+    if(int4 < result) {
+        result = int4;
+    }
+
+    printf("四個整數中，最小的是: %d\n",result);
+*/
+
+
+
+    /* 習題6 給X找Y */
+/*
+    int x,y;
+
+
+    printf("請輸入x的值: ");
+    scanf("%d", &x);
+
+    if(x<0) {
+        y=1;
+    } 
+    else if(x==0) {
+        y=5;
+    }
+    else if(x>0) {
+        y=3;
+    }
+    
+    printf("y=%d\n",y);
+*/
+
+
+
+    /* 習題7 找最大值 */    
+
 
 }
 
