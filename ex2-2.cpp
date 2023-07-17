@@ -57,6 +57,53 @@ int main(void)
     printf("%d\n", myNum + (int)myFloatNum);
     printf("%d\n", 十五);
 */
+
+
+/* max - 習題7 case 1 
+    int max(int a, int b) {
+    
+        printf("輸入a的值:");
+        scanf("%d",&a);
+        printf("輸入b的值:");
+        scanf("%d",&b);
+    
+    
+    
+        if(a>b){
+            printf("最大值= %d",a);
+        }
+        else {
+            printf("最大值= %d",b);
+        }
+        
+        return 0;
+    }
+*/
+
+
+/* max - 習題7 case 2 
+    int max(int a, int b) {
+    
+        printf("輸入a的值:");
+        scanf("%d",&a);
+        printf("輸入b的值:");
+        scanf("%d",&b);
+    
+    
+    
+        if(a>b){
+            return a;
+        }
+        else {
+            return b;
+        }
+        
+    }
+*/
+
+
+
+
 int main(void)
 {
     /*
@@ -277,7 +324,16 @@ int main(void)
     /* 習題7 找最大值 */    
 
 
+    int x, y;
+    //int result=0;
+
+    //result = max(x, y); /* case 1 */
+
+    printf("最大值= %d", max(x, y));
+
+
 }
+
 
 
 
