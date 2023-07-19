@@ -1,20 +1,8 @@
-/******************************************************************************
 
-Welcome to GDB Online.
-GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
-C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
-Code, Compile, Run and Debug online from anywhere in world.
 
-*******************************************************************************/
-/******************************************************************************
 
-Welcome to GDB Online.
-GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
-C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
-Code, Compile, Run and Debug online from anywhere in world.
-
-*******************************************************************************/
 #include <stdio.h>
+#include <string.h>
 
 /*
 int main()
@@ -81,25 +69,25 @@ int main(void)
 */
 
 
-/* max - 習題7 case 2 
-    int max(int a, int b) {
+/* max - 習題7 case 2 */
+int max(int a, int b) {
     
-        printf("輸入a的值:");
-        scanf("%d",&a);
-        printf("輸入b的值:");
-        scanf("%d",&b);
+    printf("輸入a的值:");
+    scanf("%d",&a);
+    printf("輸入b的值:");
+    scanf("%d",&b);
     
     
     
-        if(a>b){
-            return a;
-        }
-        else {
-            return b;
-        }
-        
+    if(a>b) {
+        return a;
     }
-*/
+    else {
+        return b;
+    }
+        
+}
+/* */
 
 
 
@@ -322,19 +310,124 @@ int main(void)
 
 
     /* 習題7 找最大值 */    
-
+/*
 
     int x, y;
     //int result=0;
 
-    //result = max(x, y); /* case 1 */
+    //result = max(x, y); // case 1
 
     printf("最大值= %d", max(x, y));
+*/
+
+
+    /* 習題8 找最大歲數 */    
+/*
+    int x, y;
+
+    printf("令你的歲數為a，你朋友的歲數為b\n");
+    printf("最大者是 %d 歲", max(x, y));
+*/
+
+
+
+    /* 習題9 判斷是否正確 */    
+/*
+    int x, y, sum;
+
+
+    printf("請輸入 x 的值: ");
+    scanf("%d", &x);
+    printf("請輸入 y 的值: ");
+    scanf("%d", &y);
+    printf("請輸入 x+y 的值: ");
+    scanf("%d", &sum);
+
+    if( sum == (x+y) ) {
+        printf("correct!");
+    } 
+    else {
+        printf("error! should be %d!", x+y);
+    }
+*/    
+
+
+
+    /* 習題10 判斷等第 */    
+/*
+    int x;
+
+
+    printf("請輸入成績 (0 ~ 100): ");
+    scanf("%d", &x);
+
+    if ( x >= 90 ) {
+        printf("%d 分為 A 等!", x);
+    }
+    else if ( x >= 80 ) {
+        printf("%d 分為 B 等!", x);
+    }
+    else if ( x >= 70 ) {
+        printf("%d 分為 C 等!", x);
+    }
+    else if ( x >= 60 ) {
+        printf("%d 分為 D 等!", x);
+    }
+    else {
+        printf("%d 分為 E 等!", x);
+    }
+*/
+
+
+
+    /* 習題11 印字串 */    
+/*
+    char x[80];
+
+    printf("請輸入一個字串: ");
+    scanf("%s", x);
+    printf("hello, %s", x);
+*/
+
+
+
+    /* 習題12 印數字和 */    
+/*
+    int x, y;
+
+    printf("請輸入二個數字(中間以空白間隔): ");
+    scanf("%d %d", &x, &y);
+    printf("它們的和是: %d", x+y);
+*/
+
+
+
+    /* 習題13 占卜運勢 */    
+
+    int M, D, S;
+
+    printf("請輸入月分和日期(中間以空白間隔): ");
+    scanf("%d %d", &M, &D);
+
+    S=(M*2+D)%3;
+
+    printf("運勢為：\n");
+    if ( S == 0 ) {
+        printf("普通");
+    }
+    else if ( S == 1 ) {
+        printf("吉");
+    }
+    else {
+        printf("大吉");
+    }
+
+
+
+
+
+
+
 
 
 }
-
-
-
-
-
