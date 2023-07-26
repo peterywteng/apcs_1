@@ -112,7 +112,7 @@ int main(void)
 
 
     /* 習題12 array */
-
+/*
     float a[10];
     float sum=0;
     for (int i=0; i<10; i++) {
@@ -121,11 +121,11 @@ int main(void)
     }
 
     printf("sum = %.1f \n", sum);
-        
+*/        
 
 
     /* 10. 從鍵盤輸入10個整數，統計其中 正數、負數和零的個數，並在螢幕上輸出。 */
-
+/*
 
     int a[10];
     int 正數=0;
@@ -144,17 +144,212 @@ int main(void)
     }
 
     printf("正數個數=%d, 零的個數=%d, 負數個數=%d", 正數, 零, 負數);
+*/    
+
+
+    /* 11、程式設計序實現求1-200之間的所有數的乘積並輸出。 */
+/*
+    double result=1;
+    for (int i=1; i<=50; i++) {
+        result = result * i;
+        printf("1-%d之間的所有數的乘積 = %.0lf\n", i, result);
+    }
+*/
+
+
+
+    /* 12. 從鍵盤上輸入10個數，求其平均值。 */
+/*
+    int a[10];
+    int sum=0;
+
+    printf("請輸入十個整數:\n");
+    for (int i=0; i<=9; i++) {
+        scanf("%d", &a[i]);
+        sum = sum + a[i];
+    }
+
+    printf("輸入的數字是：");
+
+    for (int i=0; i<=9; i++) {
+        printf("%d ", a[i]);
+    }
+
+    printf("\n其平均值 = %d", sum/10);
+*/
+
+
+
+    /* 13、程式設計序實現求1-1000之間的所有奇數的和並輸出。 */
+/*
+    long int result=0;
+    int i=1;
+
+    while (i<=1000) {
+        result = result + i;
+        i = i + 2;
+    }
+
+    printf("1-1000之間的所有奇數的和 = %ld:\n", result);
+*/
+
+
+
+    /* 14. 輸入n的值，n代表行數，輸出如圖所示的圖形。 */
+/*
+    int n;
+
+    printf("請輸入一個1~10之間的正整數：");
+    scanf("%d", &n);
+    for (int i=1; i<=n; i++) {
+        for (int j=1; j<=(i*2-1); j++) {
+            printf("* ");
+        }
+        printf("\n\n");
+    }
+*/
+
+
+
+    /* 15. 數字三角形，輸入數字，輸出小等於這數字的三角形，如下面範例: */
+/*
+    int n;
+
+    printf("請輸入一個1~9之間的正整數：");
+    scanf("%d", &n);
+    for (int i=1; i<=n; i++) {
+        for (int j=1; j<=i; j++) {
+            printf("%d", i);
+        }
+        printf("\n");
+    }
+*/
+
+
+
+    /* 16. 數字金字塔，輸入數字，輸出小等於這數字的金字塔，如下面範例: */
+/*
+    int n;
+
+    printf("請輸入一個1~9之間的正整數：");
+    scanf("%d", &n);
+
     
 
+    for (int i=1; i<=n; i++) {
+        for (int j=1; j<=n-i; j++) {
+            printf("_");     // print underlines (the number is from (n-1) to 0) 
+        }
+        for (int j=1; j<=(i*2-1); j++) {
+            printf("%d", i);
+        }
+        printf("\n");
+    }
+*/
+
+
+    /* 17. 九九乘法表(一) */
+/*
+    for (int i=1; i<=9; i++) {
+        for (int j=1; j<=9; j++) {
+            printf("%dx%d=%2d  ",j ,i , i*j);
+        }
+        printf("\n");
+    }
+*/    
 
 
 
+    /* 18. 九九乘法表(二) */
+/*
+    for (int i=1; i<=9; i++) {
+        for (int j=1; j<=3; j++) {
+            printf("%dx%d=%2d  ",j ,i , i*j);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    for (int i=1; i<=9; i++) {
+        for (int j=4; j<=6; j++) {
+            printf("%dx%d=%2d  ",j ,i , i*j);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    for (int i=1; i<=9; i++) {
+        for (int j=7; j<=9; j++) {
+            printf("%dx%d=%2d  ",j ,i , i*j);
+        }
+        printf("\n");
+    }
+*/
 
 
+    /* https://zerojudge.tw/ShowProblem?problemid=a005 
+       Eva的家庭作業裏有很多數列填空練習。
+       填空練習的要求是：已知數列的前四項，填出第五項。
+       因為已經知道這些數列只可能是等差或等比數列，她決定寫一個程式來完成這些練習。
+       
+       輸入說明
+       第一行是數列的數目t（0 <= t <= 20）。 
+       以下每行均包含四個整數，表示數列的前四項。 
+       約定數列的前五項均為不大於105的自然數，等比數列的比值也是自然數。
+       
+       輸出說明
+       對輸入的每個數列，輸出它的前五項。
+    */
 
-
-
+    int a[20][5];
+    int 等差[3];
+    int 等比[3];
+    int t;
+    scanf("%d", &t);
     
+    for (int i=0; i<t; i++) {
+        scanf("%d %d %d %d", &a[i][0], &a[i][1], &a[i][2], &a[i][3]);
+        for (int j=0; j<3; j++) {
+            等差[j] = a[i][j+1] - a[i][j];
+            等比[j] = a[i][j+1] / a[i][j];
+        }
+        if ( (等差[0]==等差[1]) && (等差[1]==等差[2]) ) {
+            a[i][4] = a[i][3] + 等差[0];
+        }
+        else if ( (等比[0]==等比[1]) && (等比[1]==等比[2]) ) {
+            a[i][4] = a[i][3] * 等比[0];
+        }
+        else {
+            a[i][4] = 0;
+        }
+    }
+
+    for (int i=0; i<t; i++) {
+        for (int j=0; j<5; j++) {
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
+
+
+
+    /* https://zerojudge.tw/ShowProblem?problemid=a006
+        內容
+        求一元二次方程式 ax2+bx+c=0 的根
+        輸入說明
+        每組輸入共一行，內含三個整數 a, b, c 以空白隔開。
+        輸出說明
+        Two different roots x1=?? , x2=??
+        Two same roots x=??
+        No real root
+        PS: 答案均為整數，若有兩個根則大者在前
+*/
+
+
+
+
+
+
+
+
 
 
 }
