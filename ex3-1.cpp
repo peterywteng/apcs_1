@@ -7,6 +7,8 @@ Welcome to GDB Online.
 
 *******************************************************************************/
 #include <stdio.h>
+#include <math.h>
+#include <string.h>
 
 int main(void)
 {
@@ -299,6 +301,7 @@ int main(void)
        對輸入的每個數列，輸出它的前五項。
     */
 
+/*
     int a[20][5];
     int 等差[3];
     int 等比[3];
@@ -329,7 +332,7 @@ int main(void)
         printf("\n");
     }
 
-
+*/
 
     /* https://zerojudge.tw/ShowProblem?problemid=a006
         內容
@@ -342,6 +345,101 @@ int main(void)
         No real root
         PS: 答案均為整數，若有兩個根則大者在前
 */
+
+/*
+    int a, b, c;
+    int b24ac;
+    int x1, x2;
+
+    printf("請輸入ax2+bx+c=0的a b c三個變數 (以空白區隔):\n");
+    scanf("%d %d %d", &a, &b, &c);
+    
+    b24ac = b*b-4*a*c;
+    if (b24ac < 0) {
+        printf("No real root");
+    } else if (b24ac == 0) {
+        printf("Two same roots x=%d",-b/(2*a));
+    } else {
+        x1 = (-b + sqrt(b24ac))/(2*a);
+        x2 = (-b - sqrt(b24ac))/(2*a);
+        printf("Two different roots x1=%d, x2=%d", x1, x2);
+    }
+    
+*/    
+
+
+    /* https://zerojudge.tw/ShowProblem?problemid=a009
+        在密碼學裡面有一種很簡單的加密方式，
+        就是把明碼的每個字元加上某一個整數K而得到密碼的字元
+        （明碼及密碼字元一定都在ASCII碼中可列印的範圍內）。
+        例如若K=2，那麼apple經過加密後就變成crrng了。
+        解密則是反過來做。這個問題是給你一個密碼字串，
+        請你依照上述的解密方式輸出明碼。 (此題K=7)
+
+        輸入說明
+        輸入共一行，每行含有1個字串，就是需要解密的明碼。
+        
+        輸出說明
+        對每一測試資料，請輸出解密後的密碼。*/
+
+/*
+    char str[80];
+    int x1, x2;
+
+    printf("請輸入明碼字串:\n");
+    scanf("%s", str);
+
+    for (int i=0; i<strlen(str); i++) {
+        printf("%c", str[i]-7);
+    }
+*/
+
+
+
+    /* https://zerojudge.tw/ShowProblem?problemid=a010
+        各位在國小時都學過因數分解，都瞭解怎麼樣用紙筆計算出結果，現在由你來敎電腦做因數分解。
+        因數分解就是把一個數字，切分為數個質數的乘積，如 12=2^2 * 3
+        其中, 次方的符號以 ^ 來表示
+
+        輸入說明
+        輸入共一行。每行包含一個整數，符合 大於1 且 小於等於 100000000
+
+        輸出說明
+        針對每一行輸入整數輸出一個因數分解字串 */
+
+
+    long int n, m;
+    int a[1000];
+    int j=0;
+
+    printf("請輸入一個1~100000000的數字:\n");
+    scanf("%ld", &n);
+
+    m = n;
+    int i=2;
+    while (m != 1) {
+        if(m%i == 0){
+//            printf("m=%ld, i=%d m%%i=%ld\n", m, i, m%i);
+            m = m/i;
+            a[j] = i;
+            j++;
+            i = 2;
+        } else {
+//            printf("m=%ld, i=%d m%%i=%ld\n", m, i, m%i);
+            i++;
+        }
+    }
+//    printf("j=%d\n", j);
+    
+    for(int i=0; i<j; i++){
+        printf("%d * ", a[i]);
+    }
+
+    printf("1");
+
+
+
+
 
 
 
