@@ -13,8 +13,24 @@ Welcome to GDB Online.
 #include <time.h>
 
 #define n 3
+#define Size 80
 
-
+void sort1d(int a[Size], int b[Size], int length) {
+	int j=0;
+	while (j < length) {
+		int max = 0;
+		int max_index;
+		for (int i=0; i < legnth; i++) {
+			if (a[i] >= max) {
+				max = a[i];
+				max_index = i;
+			}
+		}
+		a[max_index] = -1;
+		b[j] = max;
+		j++;		
+	}
+}
 
 
 
