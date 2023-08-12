@@ -70,11 +70,11 @@ int main(void)
 		input: abba
 		output: yes
 	*/  
-
-	char str[80];
+/*
+  char str[80];
 	
-	printf("Please input a string:\n");
-	scanf("%s", str);
+  printf("Please input a string:\n");
+  scanf("%s", str);
 
   int length = strlen(str);
   int judge = 1;
@@ -91,11 +91,17 @@ int main(void)
   } else {
     printf("yes");
   }
+*/
 
 
 
-
-
+	/* https://zerojudge.tw/ShowProblem?problemid=a104
+		輸入說明
+			第一行有一個正整數n(1<=n<=1000)，代表有幾個數字要請你幫忙排
+			第二行有n個可以用int儲存的正整數
+		輸出說明
+			輸出n個已由小到大排序好的正整數
+ */
 
 
   
@@ -107,7 +113,6 @@ int main(void)
 /*
 
 
-https://zerojudge.tw/ShowProblem?problemid=a104
 
 https://zerojudge.tw/ShowProblem?problemid=a147
 
