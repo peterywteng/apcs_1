@@ -120,6 +120,7 @@ int main(void)
  */
 
 		/* 33、從鍵盤輸入10名學生的成績資料，按成績從高到低的順序排列並輸出。（提示：用陣列存放成績資料） */
+/*
 	int length;
 	printf("Enter the length of the array: ");		
 	scanf("%d", &length);
@@ -131,29 +132,6 @@ int main(void)
 	for (int i=0; i<length; i++) {
 		scanf("%d", &a[i]);
 	}
-
-	/*
-	printf("\nSorting result: ");		
-	for (int i=0; i<length; i++) {
-		printf("%d ", a[i]);
-	}
-	
-	int b[length];
-	int j=0;
-	while (j<length) {
-		int max = 0;
-		int max_index;
-		for (int i=0; i<length; i++) {
-			if (a[i] >= max) {
-				max = a[i];
-				max_index = i;
-			}
-		}
-		a[max_index] = -1;
-		b[j] = max;
-		j++;		
-	}
- 	*/
 
 	int b[length];
 	int j=0;
@@ -176,17 +154,38 @@ int main(void)
 	for (int i=0; i<length; i++) {
 		printf("%d ", b[i]);
 	}
-  
+*/  
 
 
-  
 
+	/*
+	https://zerojudge.tw/ShowProblem?problemid=a147
+ 		大於 0、整數、不可以被 7 整除、小於 n，請輸出所有可能的數字。
+	*/
+
+	int num;
+	printf("Please input a number: ");
+	scanf("%d", &num);
+
+	printf("The positive integers smaller than %d and without 7 factors are:\n", num);
+
+	for (int i=1; i<num; i++) {
+		if (i%7 != 0) {
+			printf("%d ", i);
+		}
+	}
+
+
+
+
+
+	
 
 /*
 
 
 
-https://zerojudge.tw/ShowProblem?problemid=a147
+
 
 https://zerojudge.tw/ShowProblem?problemid=a148
 
