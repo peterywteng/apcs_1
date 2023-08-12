@@ -20,7 +20,7 @@ void sort1d(int a[Size], int b[Size], int length) {
 	while (j < length) {
 		int max = 0;
 		int max_index;
-		for (int i=0; i < legnth; i++) {
+		for (int i=0; i < length; i++) {
 			if (a[i] >= max) {
 				max = a[i];
 				max_index = i;
@@ -119,7 +119,63 @@ int main(void)
 			輸出n個已由小到大排序好的正整數
  */
 
+		/* 33、從鍵盤輸入10名學生的成績資料，按成績從高到低的順序排列並輸出。（提示：用陣列存放成績資料） */
+	int length;
+	printf("Enter the length of the array: ");		
+	scanf("%d", &length);
 
+	int a[Size];
+
+	printf("Enter the contents of the array (use space in between): ");		
+
+	for (int i=0; i<length; i++) {
+		scanf("%d", &a[i]);
+	}
+
+	/*
+	printf("\nSorting result: ");		
+	for (int i=0; i<length; i++) {
+		printf("%d ", a[i]);
+	}
+	
+	int b[length];
+	int j=0;
+	while (j<length) {
+		int max = 0;
+		int max_index;
+		for (int i=0; i<length; i++) {
+			if (a[i] >= max) {
+				max = a[i];
+				max_index = i;
+			}
+		}
+		a[max_index] = -1;
+		b[j] = max;
+		j++;		
+	}
+ 	*/
+
+	int b[length];
+	int j=0;
+	while (j<length) {
+		int min = 100;
+		int min_index;
+		for (int i=0; i<length; i++) {
+			if (a[i] <= min) {
+				min = a[i];
+				min_index = i;
+			}
+		}
+		a[min_index] = 100;
+		b[j] = min;
+		j++;		
+	}
+
+	
+	printf("Sorting result: ");		
+	for (int i=0; i<length; i++) {
+		printf("%d ", b[i]);
+	}
   
 
 
