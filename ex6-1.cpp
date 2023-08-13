@@ -162,7 +162,7 @@ int main(void)
 	https://zerojudge.tw/ShowProblem?problemid=a147
  		大於 0、整數、不可以被 7 整除、小於 n，請輸出所有可能的數字。
 	*/
-
+/*
 	int num;
 	printf("Please input a number: ");
 	scanf("%d", &num);
@@ -174,12 +174,47 @@ int main(void)
 			printf("%d ", i);
 		}
 	}
+*/
+
+
+
+	/* https://zerojudge.tw/ShowProblem?problemid=a148
+		你考了 n 科筆試題目，每科的滿分都是 100 分。老師說，如果平均大於 59 你就過關了。
+		輸入說明
+			輸入第一行為一個數字 n，代表n科；接著有 n 個正整數。代表n科的成績。
+		輸出說明
+			若你被當了，請輸出「yes」，否則輸出「no」。
+ 	*/
+
+	int num;
+	printf("Please input the number of subjects: ");
+	scanf("%d", &num);
+
+	float grades[num];
+	float sum = 0;
+	printf("Please input the grades of all subjects (use space in between): ");
+	for (int i=0; i<num; i++) {
+		scanf("%f", &grades[i]);
+		sum += grades[i];
+	}
+
+	float average = sum/num;
+	if (average > 59) {
+		printf("no");
+	} else {
+		printf("yes");
+	}
 
 
 
 
 
-	
+
+
+
+
+
+
 
 /*
 
@@ -187,7 +222,6 @@ int main(void)
 
 
 
-https://zerojudge.tw/ShowProblem?problemid=a148
 
 https://zerojudge.tw/ShowProblem?problemid=a244
 
