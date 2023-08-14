@@ -185,7 +185,7 @@ int main(void)
 		輸出說明
 			若你被當了，請輸出「yes」，否則輸出「no」。
  	*/
-
+/*
 	int num;
 	printf("Please input the number of subjects: ");
 	scanf("%d", &num);
@@ -204,26 +204,29 @@ int main(void)
 	} else {
 		printf("yes");
 	}
+*/
+
+
+	/* 
+ 	https://zerojudge.tw/ShowProblem?problemid=a244
+	輸入說明
+		第一行有一個正整数N，代表接下來有N行每行有三個正整數 a , b , c    
+	輸出說明
+		如果 a = 1  請輸出  b+c 
+		如果 a = 2  請輸出  b-c 
+		如果 a = 3  請輸出  b*c 
+		如果 a = 4  請輸出  b/c  
+		結果請用整数輸出
+  	*/
 
 
 
-
-
-
-
-
+	
 
 
 
 
 /*
-
-
-
-
-
-
-https://zerojudge.tw/ShowProblem?problemid=a244
 
 https://zerojudge.tw/ShowProblem?problemid=a263
 
