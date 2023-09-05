@@ -218,7 +218,7 @@ int main(void)
 		如果 a = 4  請輸出  b/c  
 		結果請用整数輸出
   	*/
-
+/*
 	int num;
 	printf("Please input the number of operations: ");
 	scanf("%d", &num);
@@ -251,6 +251,28 @@ int main(void)
 	for (int i=0; i<num; i++) {
 	    printf("%d\n", result[i]);
 	}
+*/
+	
+
+
+	/* https://zerojudge.tw/ShowProblem?problemid=a263
+	輸入說明
+        輸入有多筆測資，每筆測資有兩行，每行有三個整數依序是年、月、日。
+        輸入以 EOF 作為結束，題目保證不會有不符合的測資出現。
+    輸出說明
+        輸出兩個日期差幾天。
+    */
+
+	int start_yyyy, start_mm, start_dd;
+	int end_yyyy, end_mm, end_dd;
+	int diff;
+	printf("Please input the start date (yyyy mm dd): ");
+	scanf("%d %d %d", &start_yyyy, &start_mm, &start_dd);
+	printf("Please input the end date (yyyy mm dd): ");
+	scanf("%d %d %d", &end_yyyy, &end_mm, &end_dd);
+
+    diff = (end_yyyy-start_yyyy)*365 + (end_mm-start_mm)*30 + (end_dd-start_dd);  // 不考慮閏年 & 大月小月
+    printf("Diff date: %d", diff);
 
 
 	
@@ -259,8 +281,6 @@ int main(void)
 
 
 /*
-
-https://zerojudge.tw/ShowProblem?problemid=a263
 
 https://zerojudge.tw/ShowProblem?problemid=a417
 
