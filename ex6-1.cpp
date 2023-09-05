@@ -219,6 +219,38 @@ int main(void)
 		結果請用整数輸出
   	*/
 
+	int num;
+	printf("Please input the number of operations: ");
+	scanf("%d", &num);
+
+	int a[num], b[num], c[num];
+	int result[num];
+	for (int i=0; i<num; i++) {
+    	printf("Please input a b c (use space in between): ");
+		scanf("%d %d %d", &a[i], &b[i], &c[i]);
+
+        switch (a[i]) {
+            case 1:
+                result[i] = b[i] + c[i];
+                break;
+            case 2:
+                result[i] = b[i] - c[i];
+                break;
+            case 3:
+                result[i] = b[i] * c[i];
+                break;
+            case 4:
+                result[i] = b[i] / c[i];
+                break;
+            default:
+                printf("Error! a=%d should be within [1,4]!", a[i]);
+        }
+	}
+
+    printf("The results are: \n");
+	for (int i=0; i<num; i++) {
+	    printf("%d\n", result[i]);
+	}
 
 
 	
